@@ -1,0 +1,14 @@
+name: Python_test
+on: workflow_dispatch
+jobs:
+  python-pip-dependencies-caching:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: tiwarishub/setup-python@d46988a476eef401d47c6a108b97c40c7b0f8f98
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install numpy pandas requests
