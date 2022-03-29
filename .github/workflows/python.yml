@@ -9,6 +9,5 @@ jobs:
         uses: tiwarishub/setup-python@d46988a476eef401d47c6a108b97c40c7b0f8f98
         with:
           python-version: '3.8'
-          cache: 'pip'
       - name: Install dependencies
         run: pip install numpy pandas requests
